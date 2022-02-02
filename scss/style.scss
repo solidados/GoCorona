@@ -71,6 +71,34 @@ body {
 Это означает, что ко всем объектам с дополнением __container будут применены следующие условия*/
 
 [class*="__container"] {
-    max-width: 1057px;
+    max-width: 1087px;
     margin: 0px auto;
+    padding: 0px 15px;
+}
+
+
+/* PC */
+
+@media (max-width: 1087px) {
+    [class*="__container"] {
+        max-width: 970px;
+    }
+}
+
+
+/* TABLET */
+
+@media (max-width: 991.98px) {
+    [class*="__container"] {
+        max-width: 750px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767.98px) {
+    [class*="__container"] {
+        max-width: none;
+    }
 }

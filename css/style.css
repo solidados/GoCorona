@@ -35,6 +35,15 @@
           justify-content: flex-end;
 }
 
+/* ADDAPTING HEADER CONTENT ON TABLET */
+@media (max-width: 991.98px) {
+  .header__button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 170px;
+            flex: 0 0 170px;
+  }
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,6 +63,13 @@
 .menu__item {
   margin: 0 40px 0 0;
   letter-spacing: 1px;
+}
+
+/* ADDAPTING HEADER CONTENT ON TABLET */
+@media (max-width: 991.98px) {
+  .menu__item {
+    margin: 0 30px 0 0;
+  }
 }
 
 .menu__link {
@@ -88,11 +104,11 @@
   background-color: #f37a82;
 }
 
-.button_blue {
+.button__blue {
   background-color: #4285F4;
 }
 
-.button_blue:hover {
+.button__blue:hover {
   background-color: #70a3f7;
 }
 
@@ -166,6 +182,28 @@ body {
 /* Для построения размеров контейнера сайта ввожу селектор атрибута 
 Это означает, что ко всем объектам с дополнением __container будут применены следующие условия*/
 [class*="__container"] {
-  max-width: 1057px;
+  max-width: 1087px;
   margin: 0px auto;
+  padding: 0px 15px;
+}
+
+/* PC */
+@media (max-width: 1087px) {
+  [class*="__container"] {
+    max-width: 970px;
+  }
+}
+
+/* TABLET */
+@media (max-width: 991.98px) {
+  [class*="__container"] {
+    max-width: 750px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+  [class*="__container"] {
+    max-width: none;
+  }
 }
