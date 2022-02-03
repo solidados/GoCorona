@@ -17,6 +17,7 @@
           align-items: center;
 }
 
+/* .header__logo {} */
 .header__menu {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -33,17 +34,12 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-/* ADDAPTING HEADER CONTENT ON TABLET */
-@media (max-width: 991.98px) {
-  .header__button {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 170px;
-            flex: 0 0 170px;
-  }
-}
-
+/* -------------------------------- */
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,13 +61,6 @@
   letter-spacing: 1px;
 }
 
-/* ADDAPTING HEADER CONTENT ON TABLET */
-@media (max-width: 991.98px) {
-  .menu__item {
-    margin: 0 30px 0 0;
-  }
-}
-
 .menu__link {
   font-family: Raleway;
   text-transform: uppercase;
@@ -84,6 +73,22 @@
   color: #000000;
 }
 
+/* ------ ADDAPTING HEADER CONTENT ON TABLET ------ */
+@media (max-width: 991.98px) {
+  .header__container {
+    min-height: 80px;
+  }
+  .header__button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 170px;
+            flex: 0 0 170px;
+  }
+  .menu__item {
+    margin: 0 30px 0 0;
+  }
+}
+
+/* -------- BURGER MENU ------------- */
 .button {
   display: inline-block;
   font-family: Raleway;
@@ -110,6 +115,35 @@
 
 .button__blue:hover {
   background-color: #70a3f7;
+}
+
+/* -------- BURGER MENU ------------- */
+.icon-menu {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30px;
+          flex: 0 0 30px;
+  height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: space-between;
+}
+
+.icon-menu::before,
+.icon-menu::after {
+  content: "";
+  background-color: #000;
+  height: 2px;
+}
+
+.icon-menu span {
+  height: 2px;
+  background-color: #000;
 }
 
 /* Обнуление */
